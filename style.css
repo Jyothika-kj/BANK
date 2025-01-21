@@ -45,7 +45,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     z-index: 1000;
-    margin-top: 5px; /* Adjusted spacing */
+    /*margin-top: 5px;*/
 }
 
 .dropdown li {
@@ -60,10 +60,24 @@
     display: block;
 }
 
+.dropdown li:hover {
+    background-color: #f5f5f5;
+}
 
-/* Display dropdown on hover (desktop) */
-.menu.dropdown {
+/* Show dropdown on hover of both menu AND dropdown */
+.menu:hover .dropdown,
+.dropdown:hover {
     display: block;
+}
+
+/* Add a small invisible gap to prevent dropdown from closing */
+.menu::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 10px;
 }
 
 
@@ -129,11 +143,11 @@ nav a {
 
 /* Animation for color changing */
 @keyframes colorChange {
-    0% { color: #ffc107; } /* Yellow */
-    25% { color: #ff5733; } /* Orange */
-    50% { color: #33ff57; } /* Green */
-    75% { color: #3357ff; } /* Blue */
-    100% { color: #ffc107; } /* Back to Yellow */
+    0% { color: #ffc107; }
+    25% { color: #ff5733; }
+    50% { color: #33ff57; }
+    75% { color: #3357ff; }
+    100% { color: #ffc107; }
 }
 
 .carousel-container {
@@ -144,7 +158,7 @@ nav a {
 
 .carousel img {
     object-fit: cover;
-    height: 300px; /* Fixed height for consistency */
+    height: 300px;
 }
 
 .new{
@@ -155,11 +169,11 @@ nav a {
     animation: colorChange2 2s infinite;
 }
 @keyframes colorChange2 {
-    0% { color: #ffc107; } /* Yellow */
-    25% { color:  #3357ff;} /* Orange */
-    50% { color: #ff008c; } /* Green */
-    75% { color: #640083; } /* Blue */
-    100% { color: #ff5733; } /* Back to Yellow */
+    0% { color: #ffc107; }
+    25% { color:  #3357ff;}
+    50% { color: #ff008c; }
+    75% { color: #640083; }
+    100% { color: #ff5733; }
 }
 
 body {
@@ -216,66 +230,66 @@ body {
     border-radius: 10px;
     height: 300px;
     width: 300px;
-    display: flex; /* Enables Flexbox */
-    flex-direction: column; /* Align items in a column */
-    align-items: center; /* Centers items horizontally */
-    justify-content: center; /* Centers items vertically */
-    text-align: center; /* Centers text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 #autoloan{
     background-color: #f5e4dc;
     border-radius: 10px;
     height: 300px;
     width: 300px;
-    display: flex; /* Enables Flexbox */
-    flex-direction: column; /* Align items in a column */
-    align-items: center; /* Centers items horizontally */
-    justify-content: center; /* Centers items vertically */
-    text-align: center; /* Centers text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 #homeloan{
     background-color: #bebdc9;
     border-radius: 10px;
     height: 300px;
     width: 300px;
-    display: flex; /* Enables Flexbox */
-    flex-direction: column; /* Align items in a column */
-    align-items: center; /* Centers items horizontally */
-    justify-content: center; /* Centers items vertically */
-    text-align: center; /* Centers text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 #personalloan{
     background-color: #c9bbcb;
     border-radius: 10px;
     height: 300px;
     width: 300px;
-    display: flex; /* Enables Flexbox */
-    flex-direction: column; /* Align items in a column */
-    align-items: center; /* Centers items horizontally */
-    justify-content: center; /* Centers items vertically */
-    text-align: center; /* Centers text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 #checking{
     background-color: #e5c1cd;
     border-radius: 10px;
     height: 300px;
     width: 300px;
-    display: flex; /* Enables Flexbox */
-    flex-direction: column; /* Align items in a column */
-    align-items: center; /* Centers items horizontally */
-    justify-content: center; /* Centers items vertically */
-    text-align: center; /* Centers text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 #savings{
     background-color: #d0e1e9;
     border-radius: 10PX;
     height: 300px;
     width: 300px;
-    display: flex; /* Enables Flexbox */
-    flex-direction: column; /* Align items in a column */
-    align-items: center; /* Centers items horizontally */
-    justify-content: center; /* Centers items vertically */
-    text-align: center; /* Centers text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .service button{
     border: #000000;

@@ -39,11 +39,11 @@
 }
 
 #CustomerCare img {
-    margin-right: 15px; /* Add space between the image and paragraph */
+    margin-right: 15px;
 }
 
 #CustomerCare p {
-    margin: 0; /* Remove extra margin from the paragraph */
+    margin: 0;
 }
 
 

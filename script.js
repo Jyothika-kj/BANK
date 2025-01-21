@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// List of bank holidays (example: "Month Day")
+// List of bank holidays
 const bankHolidays = ["January 1", "July 4", "December 25"]; // Add your specific holidays here
 
 // Get today's date
@@ -41,9 +41,9 @@ document.getElementById("date").textContent = ` ${formattedDate} `;
 
 // Check if today is a bank holiday
 if (bankHolidays.includes(formattedDate)) {
-  document.getElementById("status").textContent = "Today is a Bank Holiday!";
+  document.getElementById("status").textContent = " | Today is a Bank Holiday!";
   document.getElementById("status").classList.add("holiday");
 } else {
-  document.getElementById("status").textContent = "Today is a Working Day.";
+  document.getElementById("status").textContent = " | Today is a Working Day.";
   document.getElementById("status").classList.add("working-day");
 }
