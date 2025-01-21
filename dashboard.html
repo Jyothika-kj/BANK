@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Bank Dashboard</title>
+</head>
+<body>
+    <div id="nav">
+        <img src="IOB.jpg" alt="IOB logo">
+        <div class="nav-links">
+            <a href="#" data-page="profile">Profile</a>
+            <a href="#" data-page="transfer">Transfer</a>
+            <a href="#" data-page="statements">Statements</a>
+            <a href="#" data-page="deposit">Deposit</a>
+            <a href="#" data-page="withdraw">Withdraw</a>
+        </div>
+        <a href="#" id="logout" class="logout-btn">Logout</a>
+    </div>
+
+    <div style="height: 100vh;padding: 1px;background-color: red;width: 10px;position: fixed;display: flex;flex-direction: column;left: 0;top: 0;"></div>
+
+    <div class="header">
+        <h1 id="greeting"></h1>
+    </div>
+
+    <div class="main-content">
+        <div id="profile" class="content-section">
+            <h2>Profile Information</h2>
+            <div class="profile-info">
+                <p><strong>Account Number:</strong> <span id="accountNumber"></span></p>
+                <p><strong>Branch:</strong> <span id="branch"></span></p>
+                <p><strong>Mobile:</strong> <span id="phone"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Bank Balance:</strong> ₹<span id="balance">0</span></p>
+            </div>
+        </div>
+
+        <div id="transfer" class="content-section hidden">
+            <h2>Fund Transfer</h2>
+            <form id="transferForm" class="transaction-form">
+                <div class="form-group">
+                    <label>Beneficiary Account Number</label>
+                    <input type="text" id="beneficiaryAccount" required>
+                </div>
+                <div class="form-group">
+                    <label>Amount (₹)</label>
+                    <input type="number" id="transferAmount" required>
+                </div>
+                <div class="form-group">
+                    <label>Remarks</label>
+                    <input type="text" id="transferRemarks">
+                </div>
+                <button type="submit">Transfer Money</button>
+            </form>
+        </div>
+
+        <div id="statements" class="content-section hidden">
+            <h2>Account Statements</h2>
+            <div class="statement-filters">
+                <label>From: <input type="date" id="fromDate"></label>
+                <label>To: <input type="date" id="toDate"></label>
+                <button onclick="fetchStatements()">Show Transactions</button>
+            </div>
+            <div id="transactionList"></div>
+        </div>
+
+        <div id="deposit" class="content-section hidden">
+            <h2>Deposit Money</h2>
+            <form id="depositForm" class="transaction-form">
+                <div class="form-group">
+                    <label>Amount (₹)</label>
+                    <input type="number" id="depositAmount" required>
+                </div>
+                <div class="form-group">
+                    <label>Deposit Type</label>
+                    <select id="depositType">
+                        <option value="cash">Cash</option>
+                        <option value="cheque">Cheque</option>
+                    </select>
+                </div>
+                <button type="submit">Deposit</button>
+            </form>
+        </div>
+
+        <div id="withdraw" class="content-section hidden">
+            <h2>Withdraw Money</h2>
+            <form id="withdrawForm" class="transaction-form">
+                <div class="form-group">
+                    <label>Amount (₹)</label>
+                    <input type="number" id="withdrawAmount" required>
+                </div>
+                <div class="form-group">
+                    <label>Remarks</label>
+                    <input type="text" id="withdrawRemarks">
+                </div>
+                <button type="submit">Withdraw</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

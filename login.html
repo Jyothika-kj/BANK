@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="heading">
+        <div class="image-container">
+            <img src="IOB.jpg" alt="ioblogo" class="a4-image">
+        </div>
+        <div class="image-container">
+            <img src="75th.png" alt="india" class="center-image">
+        </div>
+    </div>
+
+    <div id="InternetBanking">
+        <h2 style="padding-top: 15px;color: aliceblue;"><center>Internet Banking</center></h2>
+    </div>
+
+    <div style="background-color: rgb(206, 0, 0);padding: 3px;"></div>
+
+    <div id="CustomerCare">
+        <div><img src="exclamation.png" style="height: 30px;width: 30px;"></div>
+        <div><p>Customers are required to maintain minimum Balance in the account according to the scheme chosen as per extant guidelines.For details contact Branch/<a href="index.html">Bank's Website</a><br>Dear Customers,Our Bank's Customer Care Toll Free Number are 1800-890-4445 and 1800-425-4445.Beware of Fraudsters and Fake Toll Free numbers.Please Visit <a href="index.html">Bank's website</a> for more information.</p></div>
+    </div>
+
+    <center><div class="login-container">
+        <div style="background-color: rgb(40, 40, 173); height: 50px;padding-top: 10px;"><h2 style="color: rgb(255, 255, 255);margin-top: 10px;">Login</h2></div>
+        <div style="background-color: rgb(206, 0, 0);padding: 3px;"></div>
+        <form class="login-form" onsubmit="event.preventDefault(); validateLogin();"><br>
+            <div class="input-group">
+                <label for="login-id"><b>Login ID</b></label>
+                <input type="text" id="login-id" placeholder="Enter your login ID" required>
+            </div>
+            <div class="input-group">
+                <label for="password"><b>Password</b></label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <div class="input-group">
+                <label for="captcha"><b>Captcha</b></label>
+                <div style="display: flex; align-items: center;">
+                    <span id="captcha-text" style="padding: 10px; background-color: #ddd; margin-right: 10px; font-weight: bold;">AB12C</span>
+                    <input type="text" id="captcha" placeholder="Enter the captcha text" required>
+                </div>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="login-btn" style="text-decoration: none;">Login</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+            <div class="extra-links">
+                <a href="register.html" class="new-user">
+                    <img src="newregister.png" alt="New User Icon"> New User Registration
+                </a>
+                <a href="#" class="forgot-password">
+                    <img src="forgotpwd.png" alt="Forgot Password Icon"> Forgot Password
+                </a>
+            </div>
+        </form>
+    </div></center>
+    <script src="login.js" defer></script>
+</body>
+</html>

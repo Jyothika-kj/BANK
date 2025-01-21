@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>Registrationpage</title>
+</head>
+<body>
+    <div class="heading">
+        <div class="image-container">
+            <img src="IOB.jpg" alt="ioblogo" class="a4-image">
+        </div>
+        <div class="image-container">
+            <img src="75th.png" alt="india" class="center-image">
+        </div>
+    </div>
+
+    <div id="InternetBanking">
+        <h2 style="padding-top: 15px;color: aliceblue;"><center>Internet Banking - Registration</center></h2>
+    </div>
+
+    <div style="background-color: rgb(206, 0, 0);padding: 3px;"></div>
+
+    <center><div class="registration-container">
+        <div style="background-color: rgb(40, 40, 173); height: 50px;padding-top: 10px;"><h2 style="color: rgb(255, 255, 255);margin-top: 10px;">User Registration</h2></div>
+        <div style="background-color: rgb(206, 0, 0);padding: 3px;"></div>
+        <form class="registration-form"><br>
+            <div class="input-group">
+                <label for="full-name"><b>Full Name</b></label>
+                <input type="text" id="full-name" placeholder="Enter your full name" required>
+            </div>
+            <div class="input-group">
+                <label for="email"><b>Email</b></label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="phone"><b>Phone Number</b></label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="input-group">
+                <label for="account-number"><b>Account Number</b></label>
+                <input type="text" id="account-number" placeholder="Enter your account number" required>
+            </div>
+            <div class="input-group">
+                <label for="branch"><b>Branch</b></label>
+                <input type="text" id="branch" placeholder="Enter your branch" required>
+            </div>
+            <div class="input-group">
+                <label for="user-id"><b>User ID</b></label>
+                <input type="text" id="user-id" placeholder="Create a unique User ID" required>
+            </div>
+            <div class="input-group">
+                <label for="password"><b>Password</b></label>
+                <input type="password" id="password" placeholder="Create a password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password"><b>Confirm Password</b></label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+            </div>
+            <div class="input-group">
+                <label for="captcha"><b>Captcha</b></label>
+                <div style="display: flex; align-items: center;">
+                    <span id="captcha-text" style="padding: 10px; background-color: #ddd; margin-right: 10px; font-weight: bold;">AB12C</span>
+                    <input type="text" id="captcha" placeholder="Enter the captcha text" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>
+                    <input type="checkbox" id="declaration" required>
+                    I hereby declare that the information provided is true and accurate to the best of my knowledge. I agree to the <a href="#">terms and conditions</a>.
+                </label>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="register-btn">Register</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+        </form>
+    </div></center>
+    <script src="register.js" defer></script>
+</body>
+</html>

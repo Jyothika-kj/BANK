@@ -1,0 +1,142 @@
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 90px;
+    margin-top: -20px;
+}
+
+/* Image Styles */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-image {
+    height: 150px;
+    width: 150px;
+    margin-right: 900px;
+}
+
+#InternetBanking{
+    background-color: rgb(40, 40, 173);
+    height: 60px;
+    margin-top: -35px;
+}
+#CustomerCare {
+    display: flex;
+    align-items: center; /* Align the image and text vertically */
+    background-color: rgb(255, 194, 194);
+    padding-left: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 10px;
+    padding: 20px;
+    color: rgb(228, 11, 11);
+    font-size: large;
+    line-height: 25px;
+}
+
+#CustomerCare img {
+    margin-right: 15px; /* Add space between the image and paragraph */
+}
+
+#CustomerCare p {
+    margin: 0; /* Remove extra margin from the paragraph */
+}
+
+
+.login-container {
+    background-color: rgba(201, 198, 198, 0.26);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    padding: 30px;
+    width: 1000px;
+    height: 500px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#captcha-text {
+    font-family: monospace;
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Button Group */
+.button-group {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 10px;
+}
+
+.reset-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Extra Links */
+.extra-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.extra-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #007BFF;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.extra-links a img {
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
