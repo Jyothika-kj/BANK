@@ -1,4 +1,3 @@
-/* Base CSS (your provided styles) */
 .heading {
     display: flex;
     align-items: center;
@@ -7,7 +6,6 @@
     margin-top: -20px;
 }
 
-/* Image Styles */
 .image-container {
     display: flex;
     justify-content: center;
@@ -28,7 +26,7 @@
 
 #CustomerCare {
     display: flex;
-    align-items: center; /* Align the image and text vertically */
+    align-items: center;
     background-color: rgb(255, 194, 194);
     padding-left: 50px;
     margin-left: 150px;
@@ -64,7 +62,6 @@ h2 {
     color: #333;
 }
 
-/* Input Group */
 .input-group {
     margin-bottom: 15px;
     text-align: left;
@@ -92,7 +89,6 @@ input {
     color: #333;
 }
 
-/* Button Group */
 .button-group {
     margin-top: 20px;
 }
@@ -116,7 +112,6 @@ button {
     color: white;
 }
 
-/* Extra Links */
 .extra-links {
     margin-top: 20px;
     text-align: center;
@@ -142,11 +137,8 @@ button {
     text-decoration: underline;
 }
 
-/* -------------------------------------------------- */
 /* Media Query for screens 768px or smaller         */
-/* -------------------------------------------------- */
 @media (max-width: 768px) {
-    /* Adjust heading to stack elements vertically */
     .heading {
         flex-direction: column;
         align-items: center;
@@ -154,25 +146,22 @@ button {
         margin-top: 0;
     }
 
-    /* Center image adjustments */
     .center-image {
         margin-right: 0;
         height: 100px;
         width: 100px;
     }
 
-    /* Adjust InternetBanking if needed */
     #InternetBanking {
         margin-top: 0;
         height: 50px;
     }
 
-    /* Make CustomerCare section more mobile-friendly */
     #CustomerCare {
         flex-direction: column;
         align-items: center;
         padding: 15px;
-        margin: 10px;  /* Reduce side margins */
+        margin: 10px;
         text-align: center;
     }
 
@@ -181,15 +170,13 @@ button {
         margin-bottom: 10px;
     }
 
-    /* Make the login container fluid */
     .login-container {
-        width: 90%;      /* Use percentage width instead of fixed px */
-        height: auto;    /* Let the height adjust automatically */
+        width: 90%; 
+        height: auto;
         padding: 20px;
-        margin: 20px auto;  /* Center it on the screen */
+        margin: 20px auto;
     }
 
-    /* Input fields and buttons adjustments */
     input {
         padding: 8px;
         font-size: 13px;
