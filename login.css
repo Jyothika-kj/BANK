@@ -1,3 +1,4 @@
+/* Base CSS (your provided styles) */
 .heading {
     display: flex;
     align-items: center;
@@ -19,11 +20,12 @@
     margin-right: 900px;
 }
 
-#InternetBanking{
+#InternetBanking {
     background-color: rgb(40, 40, 173);
     height: 60px;
     margin-top: -35px;
 }
+
 #CustomerCare {
     display: flex;
     align-items: center; /* Align the image and text vertically */
@@ -45,7 +47,6 @@
 #CustomerCare p {
     margin: 0;
 }
-
 
 .login-container {
     background-color: rgba(201, 198, 198, 0.26);
@@ -139,4 +140,68 @@ button {
 
 .extra-links a:hover {
     text-decoration: underline;
+}
+
+/* -------------------------------------------------- */
+/* Media Query for screens 768px or smaller         */
+/* -------------------------------------------------- */
+@media (max-width: 768px) {
+    /* Adjust heading to stack elements vertically */
+    .heading {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10px;
+        margin-top: 0;
+    }
+
+    /* Center image adjustments */
+    .center-image {
+        margin-right: 0;
+        height: 100px;
+        width: 100px;
+    }
+
+    /* Adjust InternetBanking if needed */
+    #InternetBanking {
+        margin-top: 0;
+        height: 50px;
+    }
+
+    /* Make CustomerCare section more mobile-friendly */
+    #CustomerCare {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        margin: 10px;  /* Reduce side margins */
+        text-align: center;
+    }
+
+    #CustomerCare img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Make the login container fluid */
+    .login-container {
+        width: 90%;      /* Use percentage width instead of fixed px */
+        height: auto;    /* Let the height adjust automatically */
+        padding: 20px;
+        margin: 20px auto;  /* Center it on the screen */
+    }
+
+    /* Input fields and buttons adjustments */
+    input {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    /* Extra links font-size */
+    .extra-links a {
+        font-size: 13px;
+    }
 }

@@ -313,3 +313,60 @@ footer{
     background-color: #0020a0;
     color: white;
 }
+
+
+
+
+
+
+/* Media query for screens 768px or less */
+@media (max-width: 768px) {
+  
+    /* Adjusting the search bar */
+    .search {
+      margin: 7px auto; /* Center the search bar horizontally */
+      width: 80%;
+      height: 30px;
+    }
+    
+    /* Adjusting the header padding and layout */
+    #header {
+      padding: 10px 20px;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+    
+    /* Adjusting the navigation layout */
+    nav {
+      margin-left: 0;
+      margin-top: 15px;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    nav a {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    
+    /* Adjusting the service section grid layout */
+    .service {
+      grid-template-columns: 1fr; /* Stack service cards vertically */
+      margin: 0 20px; /* Remove large left/right margins */
+    }
+    
+    /* Adjusting the newServices button container */
+    .newServices {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      padding: 10px;
+    }
+    
+    /* Adjusting the carousel images if necessary */
+    .carousel img {
+      height: auto; /* Let the image adjust its height */
+      width: 100%;
+    }
+  }
+  

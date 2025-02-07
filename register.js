@@ -8,8 +8,8 @@ function generateCaptcha() {
     document.getElementById('captcha-text').innerText = captcha;
 }
 
-// Validate the form and store data in localStorage
-document.querySelector('.registration-form').addEventListener('submit', function (event) {
+// Validate the form and send data to backend
+document.querySelector('.registration-form').addEventListener('submit', async function (event) {
     event.preventDefault(); // Prevent form submission
 
     // Get input values
@@ -17,7 +17,7 @@ document.querySelector('.registration-form').addEventListener('submit', function
     const email = document.getElementById('email').value.trim();
     const phone = document.getElementById('phone').value.trim();
     const accountNumber = document.getElementById('account-number').value.trim();
-    const branch=document.getElementById('branch').value.trim();
+    const branch = document.getElementById('branch').value.trim();
     const userId = document.getElementById('user-id').value.trim();
     const password = document.getElementById('password').value.trim();
     const confirmPassword = document.getElementById('confirm-password').value.trim();
@@ -48,20 +48,35 @@ document.querySelector('.registration-form').addEventListener('submit', function
 
     // Create a user object
     const userData = {
-        fullName,
+        fullname: fullName,
         email,
-        phone,
-        accountNumber,
-        branch,
-        userId,
         password,
+        phoneNumber: phone,
+        userId,
+        accountNumber,
+        branch
     };
 
-    // Save the user data in localStorage
-    localStorage.setItem(userId, JSON.stringify(userData));
+    try {
+        // Send user data to backend for registration
+        const response = await fetch("https://render-express-deployment-3.onrender.com/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(userData)
+        });
 
-    alert("Registration successful! You can now log in.");
-    window.location.href = "login.html"; // Redirect to login page
+        const result = await response.json();
+
+        if (response.ok) {
+            alert("Registration successful! You can now log in.");
+            window.location.href = "login.html"; // Redirect to login page
+        } else {
+            alert("Error: " + result.message);
+        }
+    } catch (error) {
+        console.error("Registration error:", error);
+        alert("An error occurred. Please try again.");
+    }
 });
 
 // Initialize the captcha
