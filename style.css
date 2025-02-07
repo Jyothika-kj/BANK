@@ -1,16 +1,18 @@
-.search{
-    margin-left:800px;
+.search {
+    margin-left: 800px;
     margin-top: 7px;
     border-radius: 10px;
     width: 200px;
     height: 30px;
 }
+
+/* Navigation Bar */
 #lan {
     background-color: #3753c4;
     height: 50px;
 }
 
-#lan a{
+#lan a {
     color: #ffffff;
     text-decoration: none;
     padding: 15px;
@@ -19,6 +21,7 @@
     font-weight: 500;
 }
 
+/* Language Button */
 #language {
     background-color: #3753c4;
     color: white;
@@ -27,9 +30,6 @@
     font-weight: 500;
 }
 
-
-
-/* Styling for dropdown */
 .menu {
     position: relative;
     display: inline-block;
@@ -45,7 +45,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     z-index: 1000;
-    /*margin-top: 5px;*/
 }
 
 .dropdown li {
@@ -64,13 +63,13 @@
     background-color: #f5f5f5;
 }
 
-/* Show dropdown on hover of both menu AND dropdown */
+/* Show dropdown on hover */
 .menu:hover .dropdown,
 .dropdown:hover {
     display: block;
 }
 
-/* Add a small invisible gap to prevent dropdown from closing */
+/* Prevent dropdown from closing immediately */
 .menu::after {
     content: '';
     position: absolute;
@@ -80,8 +79,7 @@
     height: 10px;
 }
 
-
-
+/* Header */
 #header {
     display: flex;
     align-items: center;
@@ -90,7 +88,8 @@
     height: 30px;
 }
 
-.login{
+/* Login Button */
+.login {
     height: 30px;
     width: 100px;
     border-radius: 10px;
@@ -99,6 +98,7 @@
     margin-left: 10px;
 }
 
+/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
@@ -113,10 +113,10 @@ nav a {
     margin: 0 15px;
     font-size: 20px;
     font-weight: bold;
-    margin-top: 5px;
 }
 
-.accbtn{
+/* Account Button */
+.accbtn {
     background-color: #3753c4;
     color: #ffffff;
     border-radius: 20px;
@@ -139,6 +139,7 @@ nav a {
     color: #ffffff;
     font-style: normal;
     animation: colorChange 2s infinite; /* Apply the animation */
+    font-size: 18px;
 }
 
 /* Animation for color changing */
@@ -155,22 +156,23 @@ nav a {
     width: 100%;
 }
 
-
 .carousel img {
     object-fit: cover;
     height: 300px;
+    width: 100%; /* Ensure images take the full width */
 }
 
-.new{
+.new {
     margin: 5px 0;
     font-weight: bold;
     color: #ffffff;
     font-style: italic;
     animation: colorChange2 2s infinite;
 }
+
 @keyframes colorChange2 {
     0% { color: #ffc107; }
-    25% { color:  #3357ff;}
+    25% { color: #3357ff; }
     50% { color: #ff008c; }
     75% { color: #640083; }
     100% { color: #ff5733; }
@@ -183,9 +185,8 @@ body {
     background-color: #f8f8f8;
 }
 
+/* Services Grid */
 .newServices {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     display: flex;
     flex-wrap: wrap; /* Wrap buttons into multiple rows */
     gap: 15px;
@@ -204,29 +205,33 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, background-color 0.3s ease;
     text-align: center;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
 }
 
 .newServices button:hover {
-    background-color:#eaecc5 ;
-    transform: translateY(-2px); /* Lift button on hover */
+    background-color: #eaecc5;
+    transform: translateY(-2px);
 }
 
-.service{
+/* Services Display */
+.service {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-left: 500px;
     margin-right: 400px;
 }
-.service img{
+
+.service img {
     height: 100px;
 }
-.service p{
+
+.service p {
     padding: 10px;
 }
-#creditcard{
-    background-color: #b8d2d6;
+
+/* Individual Service Boxes */
+#creditcard, #autoloan, #homeloan, #personalloan, #checking, #savings {
     border-radius: 10px;
     height: 300px;
     width: 300px;
@@ -236,63 +241,16 @@ body {
     justify-content: center;
     text-align: center;
 }
-#autoloan{
-    background-color: #f5e4dc;
-    border-radius: 10px;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-#homeloan{
-    background-color: #bebdc9;
-    border-radius: 10px;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-#personalloan{
-    background-color: #c9bbcb;
-    border-radius: 10px;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-#checking{
-    background-color: #e5c1cd;
-    border-radius: 10px;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-#savings{
-    background-color: #d0e1e9;
-    border-radius: 10PX;
-    height: 300px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.service button{
-    border: #000000;
+
+#creditcard { background-color: #b8d2d6; }
+#autoloan { background-color: #f5e4dc; }
+#homeloan { background-color: #bebdc9; }
+#personalloan { background-color: #c9bbcb; }
+#checking { background-color: #e5c1cd; }
+#savings { background-color: #d0e1e9; }
+
+.service button {
+    border: none;
     border-radius: 20px;
     background-color: #ffffff;
     height: 30px;
@@ -301,72 +259,237 @@ body {
 
 marquee {
     margin-top: 20px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-    border: 1px solid rgba(0, 0, 0, .15);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     background-color: #9cbeed;
     padding: 10px;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: space-evenly;
     background-color: #0020a0;
     color: white;
+    padding: 20px 0;
 }
 
 
-
-
-
-
-/* Media query for screens 768px or less */
-@media (max-width: 768px) {
-  
-    /* Adjusting the search bar */
-    .search {
-      margin: 7px auto; /* Center the search bar horizontally */
-      width: 80%;
-      height: 30px;
-    }
-    
-    /* Adjusting the header padding and layout */
+@media screen and (max-width: 1024px) {
     #header {
-      padding: 10px 20px;
-      flex-direction: column;
-      align-items: center;
-      height: auto;
+        padding: 10px 50px;
     }
     
-    /* Adjusting the navigation layout */
     nav {
-      margin-left: 0;
-      margin-top: 15px;
-      flex-direction: column;
-      align-items: center;
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
     }
     
     nav a {
-      margin: 10px 0;
-      font-size: 18px;
+        font-size: 18px;
+        margin: 10px;
     }
     
-    /* Adjusting the service section grid layout */
-    .service {
-      grid-template-columns: 1fr; /* Stack service cards vertically */
-      margin: 0 20px; /* Remove large left/right margins */
+    .login, .accbtn {
+        width: 120px;
+        font-size: 14px;
     }
-    
-    /* Adjusting the newServices button container */
-    .newServices {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-      padding: 10px;
-    }
-    
-    /* Adjusting the carousel images if necessary */
+
     .carousel img {
-      height: auto; /* Let the image adjust its height */
-      width: 100%;
+        height: 250px; /* Reduce height for tablets */
     }
-  }
-  
+
+    .service {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .newServices button {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+
+    marquee {
+        padding: 8px;
+        font-size: 16px; /* Adjust font size */
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+}
+
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    .search {
+        margin-left: 0; /* Center align */
+        width: 80%; /* Adjust width for smaller screens */
+        display: block;
+        margin: 10px auto;
+    }
+
+    #lan {
+        height: auto; /* Adjust height */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #lan a {
+        display: block; /* Stack links on smaller screens */
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #language {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    nav a {
+        font-size: 16px;
+        display: block;
+        margin: 8px 0;
+    }
+    
+    .login, .accbtn {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    /* Make dropdown full width on small screens */
+    .dropdown {
+        min-width: 100%;
+        position: static;
+        box-shadow: none;
+    }
+    
+    .dropdown li {
+        padding: 8px 12px;
+    }
+
+    #holiday-display {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    #holiday-display p {
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .carousel img {
+        height: 200px; /* Reduce height for smaller screens */
+    }
+
+    .service {
+        grid-template-columns: repeat(1, 1fr); /* Single column */
+        margin-left: auto;
+        margin-right: auto;
+        gap: 20px;
+    }
+
+    .service div {
+        width: 90%; /* Make boxes take more space */
+    }
+
+    .newServices {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newServices button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    marquee {
+        padding: 6px;
+        font-size: 14px; /* Further reduce font size */
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+    
+    nav a {
+        font-size: 14px;
+    }
+    
+    .login, .accbtn {
+        width: 90px;
+        font-size: 12px;
+    }
+    
+    #header {
+        padding: 5px;
+    }
+
+    #holiday-display {
+        padding: 8px;
+    }
+    
+    #holiday-display p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .carousel img {
+        height: 150px; /* Reduce height for mobile devices */
+    }
+
+    .service {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service div {
+        width: 95%;
+        height: 250px; /* Reduce box height for small screens */
+    }
+
+    .service button {
+        width: 90px;
+        font-size: 12px;
+    }
+
+    .newServices button {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    marquee {
+        padding: 5px;
+        font-size: 12px; /* Smallest font size for readability */
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+}
